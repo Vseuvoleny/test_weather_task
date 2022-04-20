@@ -1,14 +1,23 @@
-import React, { FC } from "react";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { CityTemplate } from "./pages/CityTemplate";
+import { City } from "./pages/City";
 import GlobalStyle from "./globalStyles";
 import { AppContainer } from "./App.styles";
 
-const App: FC<any> = () => {
+function App() {
   return (
     <AppContainer>
       <GlobalStyle />
-      Ghbdtn
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="city" element={<CityTemplate />}>
+          <Route path=":name" element={<City />} />
+        </Route>
+      </Routes>
     </AppContainer>
   );
-};
+}
 
 export default App;
