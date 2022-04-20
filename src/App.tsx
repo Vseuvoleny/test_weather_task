@@ -1,7 +1,14 @@
-import React from "react";
+import React, { FC } from "react";
+import GlobalStyle from "./globalStyles";
+import { AppContainer } from "./App.styles";
 
-function App() {
-  return <div className="App">Ghbdtn</div>;
-}
+const App: FC<any> = () => {
+  return (
+    <AppContainer>
+      <GlobalStyle />
+      Ghbdtn
+    </AppContainer>
+  );
+};
 
 export default App;
