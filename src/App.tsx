@@ -10,12 +10,13 @@ function App() {
   return (
     <AppContainer>
       <GlobalStyle />
-      <Routes>
+      <Home />
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="city" element={<CityTemplate />}>
           <Route path=":name" element={<City />} />
         </Route>
-      </Routes>
+      </Routes> */}
     </AppContainer>
   );
 }
