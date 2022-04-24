@@ -3,10 +3,10 @@ import mask from "./assets/Mask.png";
 
 export const AppContainer = styled.div`
     width: 100%;
-    background: transparent url('${mask}') 0% 0% no-repeat padding-box;
-    opacity: 1;
-    height: 100vh;
     position: relative;
+    background: transparent url('${mask}') center no-repeat;
+    background-size: cover;
+    opacity: 1;
 `;
 
 export const Background = styled.div`

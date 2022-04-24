@@ -22,5 +22,6 @@ import { mock } from "../mock/mock";
 export const fetchCity = createAsyncThunk("cities/fetchCity", async () => {
   // const response = await axios.get('../')
   // return response.data;
+
   return mock;
 });

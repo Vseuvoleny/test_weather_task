@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Footer } from "../../components/footer/footer";
 import { Heading } from "../../components/heading/heading";
 import { Main } from "../../components/main/main";
 import { Card } from "../../elements/card/card";
 import { Input } from "../../elements/input";
-import { Typography } from "../../elements/typography";
 import { fetchCity } from "../../store/actionCreator";
+import { citiesSlice } from "../../store/citiesSlice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import {
   CardsContainer,
@@ -18,9 +18,14 @@ import {
 export const Home = () => {
   const { cities } = useAppSelector((state) => state.citiReducers);
   const dispatch = useAppDispatch();
-  console.log(cities);
 
   const handleCity = () => {
+    if (cities.length === 5) {
+      console.log("slice");
+
+      dispatch(citiesSlice.actions.sliceCitiesArray());
+    }
+
     dispatch(fetchCity());
   };
   return (
@@ -33,7 +38,7 @@ export const Home = () => {
             <StyledTypography>
               Add 5 cities whose temperature you want to track.
             </StyledTypography>
-            <Input onChange={handleCity} />
+            <Input onClick={handleCity} />
           </InputContainer>
           {cities.length > 0 && (
             <CardsContainer>

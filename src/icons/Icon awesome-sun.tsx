@@ -2,12 +2,11 @@ import React, { FC } from "react";
 import { Icon } from "./types";
 
 export const SunIcon: FC<Icon> = ({ viewBox = "75 75", fill = "#fff", id }) => {
-  const [width, height] = viewBox.split(" ");
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={width}
-      height={height}
+      width={36}
+      height={36}
       viewBox={`0 0 ${viewBox}`}
     >
       <path

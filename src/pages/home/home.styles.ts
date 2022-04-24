@@ -18,7 +18,7 @@ export const StyledSection = styled(Section)`
 `;
 
 export const InputContainer = styled.div`
-  padding: 80px 160px 0;
+  padding: 80px 60px 0;
   align-self: center;
   max-width: 1000px;
   width: 100%;
@@ -40,4 +40,10 @@ export const StyledInput = styled(Input)`
   padding-top: 50px;
 `;
 
-export const CardsContainer = styled.div``;
+export const CardsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 150px;
+  margin-bottom: 145px;
+  background: transparent;
+`;

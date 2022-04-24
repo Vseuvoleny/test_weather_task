@@ -9,7 +9,7 @@ export const Card: FC<CardProps> = ({ city }) => {
       <City>{location.name}</City>
       <Country>{location.country}</Country>
       <Temp>{current.temperature}&#8451;</Temp>
-      <CityLink to={""}></CityLink>
+      <CityLink to={`./city/${location.name}`}>View city</CityLink>
     </CardContainer>
   );
 };

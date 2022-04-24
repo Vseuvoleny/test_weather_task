@@ -11,13 +11,12 @@ function App() {
     <AppContainer>
       <Background />
       <GlobalStyle />
-      <Home />
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="city" element={<CityTemplate />}>
           <Route path=":name" element={<City />} />
         </Route>
-      </Routes> */}
+      </Routes>
     </AppContainer>
   );
 }
