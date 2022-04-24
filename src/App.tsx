@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./pages/Home";
+import { Home } from "./pages/home/home";
 import { CityTemplate } from "./pages/CityTemplate";
 import { City } from "./pages/City";
 import GlobalStyle from "./globalStyles";

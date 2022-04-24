@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface TypographyProps {
+export interface SectionProps {
   children: React.ReactNode;
   className?: string;
 }
