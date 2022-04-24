@@ -4,11 +4,12 @@ import { Home } from "./pages/home/home";
 import { CityTemplate } from "./pages/CityTemplate";
 import { City } from "./pages/City";
 import GlobalStyle from "./globalStyles";
-import { AppContainer } from "./App.styles";
+import { AppContainer, Background } from "./App.styles";
 
 function App() {
   return (
     <AppContainer>
+      <Background />
       <GlobalStyle />
       <Home />
       {/* <Routes>

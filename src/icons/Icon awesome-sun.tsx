@@ -8,7 +8,7 @@ export const SunIcon: FC<Icon> = ({ viewBox = "75 75", fill = "#fff", id }) => {
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
-      viewBox={viewBox}
+      viewBox={`0 0 ${viewBox}`}
     >
       <path
         id={id}

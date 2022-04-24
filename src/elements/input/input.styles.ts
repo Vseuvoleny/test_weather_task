@@ -6,6 +6,8 @@ export const Box = styled.div`
   padding: 20px 7px 20px 20px;
   background: #fff;
   border-radius: 10px;
+  width: 100%;
+  margin-top: 50px;
 `;
 export const InputContainer = styled.div`
   position: relative;
@@ -46,4 +48,5 @@ export const Button = styled.button`
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  margin-left: auto;
 `;

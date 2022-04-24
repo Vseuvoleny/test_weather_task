@@ -1,12 +1,12 @@
 import React, { FC } from "react";
-import { Typography } from "../../elements/typography";
 import { SunIcon } from "../../icons/Icon awesome-sun";
+import { Title } from "./heading.styles";
 
 export const Heading: FC<any> = () => {
   return (
-    <Typography>
-      <SunIcon id={"Icon_awesome-sun"} />
+    <Title>
+      <SunIcon id={"Icon_awesome-sun"} viewBox="36 36" />
       WeatherStation
-    </Typography>
+    </Title>
   );
 };

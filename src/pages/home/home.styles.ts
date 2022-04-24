@@ -7,6 +7,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  z-index: 2;
+  position: relative;
 `;
 
 export const StyledSection = styled(Section)`
@@ -18,12 +20,24 @@ export const StyledSection = styled(Section)`
 export const InputContainer = styled.div`
   padding: 80px 160px 0;
   align-self: center;
+  max-width: 1000px;
+  width: 100%;
 `;
 
 export const StyledTypography = styled(Typography)`
   padding-bottom: 20px;
+  color: #fff;
+  font-size: 24px;
+  &:first-of-type {
+    font-weight: 400;
+  }
+  &:last-of-type {
+    font-weight: 300;
+  }
 `;
 
 export const StyledInput = styled(Input)`
   padding-top: 50px;
 `;
+
+export const CardsContainer = styled.div``;

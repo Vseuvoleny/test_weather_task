@@ -2,6 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { citiesSlice } from "./citiesSlice";
 import { AppDispatch } from "./store";
+import { mock } from "../mock/mock";
 
 // export const fetchCity = () => async (dispatch: AppDispatch) => {
 //     try {
@@ -12,14 +13,14 @@ import { AppDispatch } from "./store";
 //         // };
 //         const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
 
-
 //         dispatch(citiesSlice.actions.cityFullfiled(response.data));
 //     } catch (error) {
 //         dispatch(citiesSlice.actions.cityRejected(error));
 //     }
 // }
 
-export const fetchCity = createAsyncThunk('cities/fetchCity', async () => {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
-    return response.data;
-})
+export const fetchCity = createAsyncThunk("cities/fetchCity", async () => {
+  // const response = await axios.get('../')
+  // return response.data;
+  return mock;
+});
