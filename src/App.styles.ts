@@ -16,4 +16,11 @@ export const Background = styled.div`
   width: 100%;
   height: 100%;
   z-index: 1;
+  top: 0;
+  left: 0;
+`;
+
+export const Box = styled.div`
+  position: relative;
+  z-index: 2;
 `;

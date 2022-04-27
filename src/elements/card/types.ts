@@ -1,3 +1,6 @@
+import { CityWeather } from "../../store/types";
+
 export interface CardProps {
-  city: any;
+  city: CityWeather;
+  extended?: boolean;
 }

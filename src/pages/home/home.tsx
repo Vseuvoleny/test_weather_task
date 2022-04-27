@@ -16,11 +16,11 @@ import {
 } from "./home.styles";
 
 export const Home = () => {
-  const { cities } = useAppSelector((state) => state.citiReducers);
+  const { citiesWeather } = useAppSelector((state) => state.citiReducers);
   const dispatch = useAppDispatch();
 
   const handleCity = () => {
-    if (cities.length === 5) {
+    if (citiesWeather.length === 5) {
       console.log("slice");
 
       dispatch(citiesSlice.actions.sliceCitiesArray());
@@ -31,7 +31,6 @@ export const Home = () => {
   return (
     <Container>
       <StyledSection>
-        <Heading />
         <Main>
           <InputContainer>
             <StyledTypography>Add Cities</StyledTypography>
@@ -40,13 +39,10 @@ export const Home = () => {
             </StyledTypography>
             <Input onClick={handleCity} />
           </InputContainer>
-          {cities.length > 0 && (
-            <CardsContainer>
-              {cities.map((city) => (
-                <Card city={city} />
-              ))}
-            </CardsContainer>
-          )}
+          <CardsContainer>
+            {citiesWeather.length > 0 &&
+              citiesWeather.map((city) => <Card city={city} />)}
+          </CardsContainer>
         </Main>
       </StyledSection>
       <Footer />

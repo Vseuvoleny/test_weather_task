@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const CardContainer = styled.div`
-  padding: 40px 77px 45px;
+export const CardContainer = styled.div<{ $extended: boolean }>`
+  ${({ $extended: extended }) =>
+    css`
+      padding: ${extended ? "38px 50px" : "40px 77px 45px"};
+      flex-direction: ${extended ? "row" : "column"};
+    `}
+
   border-radius: 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   background: #fff;
 `;
@@ -32,3 +36,14 @@ export const CityLink = styled(Link)`
   text-align: center;
   border-radius: 10px;
 `;
+
+export const Location = styled.div``;
+export const Coordinates = styled.div``;
+export const CurrentWeatherBox = styled.div``;
+export const Icon = styled.img``;
+export const AdditionalWeatherBox = styled.div``;
+export const FeelsLike = styled.div``;
+export const Humidity = styled.div``;
+export const Pressure = styled.div``;
+export const Wind = styled.div``;
+export const UVIndex = styled.div``;

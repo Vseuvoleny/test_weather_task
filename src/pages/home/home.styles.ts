@@ -46,4 +46,5 @@ export const CardsContainer = styled.div`
   margin-top: 150px;
   margin-bottom: 145px;
   background: transparent;
+  column-gap: 55px;
 `;
